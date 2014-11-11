@@ -17,9 +17,13 @@
 		overflow: hidden;
 	}
 	#pages{
+		transition: transform 1s ease;
+		-moz-transition: -moz-transform 1s ease;
 		-webkit-transition: -webkit-transform 1s ease;
 	}
 	.page{
+		/*display: -webkit-box;
+		-webkit-box-align: center;*/
 		text-align: center;
 		position: relative;
 	}
@@ -37,6 +41,41 @@
 	#forth-page{
 		background-color: #303;
 	}
+	#phone2{
+		position: absolute;
+		top: 50%;
+		left: 180px;
+		margin-top: -257px;
+		width: 280px;
+		height: 514px;
+		background-image: url(images/phone1.png);
+		background-size: cover;
+		overflow: hidden;
+
+	}
+	#phone2>div{
+		width: 210px;
+		position: absolute;
+		top: 80px;
+		left: 33px;
+		height: 368px;
+		overflow: hidden;
+	}
+	#phone2_imgs{
+		list-style: none;
+		width: 630px;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		transition: transform 1s ease;
+		-moz-transition: -moz-transform 1s ease;
+		-webkit-transition: -webkit-transform 1s ease;
+	}
+	#phone2_imgs>li{
+		width: 210px;
+		height: 367px;
+		float: left;
+	}
 	</style>
 </head>
 <body>
@@ -47,7 +86,21 @@
 			</section>
 
 			<section id="second-page" class="page">
-
+				<div id="phone2">
+					<div>
+						<ul id="phone2_imgs">
+							<li>
+								<img src="images/register1.png" width="100%">
+							</li>
+							<li>
+								<img src="images/register2.jpg" width="100%">
+							</li>
+							<li>
+								<img src="images/register3.jpg" width="100%">
+							</li>
+						</ul>
+					</div>
+				</div>
 			</section>
 
 			<section id="third-page" class="page">
@@ -101,7 +154,9 @@
 	            home_support.startPageAnimation();
 			}
 		}
+
 		var home_support = {
+			page2ImgIndex: 1,
 			curpage: 1,
 			pageHeight: 0,
 			setPageSize: function() {
@@ -117,6 +172,8 @@
 				if(this.curpage > 1) {
 					this.curpage--;
 					height = this.pageHeight * (this.curpage - 1);
+					document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
+					document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
 					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
 				}
 			},
@@ -125,22 +182,24 @@
 				if(this.curpage < 4) {
 					this.curpage++;
 					height = this.pageHeight * (this.curpage - 1);
+					document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
+					document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
 					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
 				}
 			},
 			startPageAnimation: function() {
 				switch(this.curpage) {
 					case 1: 
-
+						animationPage1();
 						break;
 					case 2: 
-
+						animationPage2();
 						break;
 					case 3:
-
+						animationPage3();
 						break;
 					case 4: 
-
+						animationPage4();
 						break;
 					default:
 
@@ -148,6 +207,34 @@
 				}
 			}
 		}
+	
+		function animationPage1() {
+
+		}
+
+		function animationPage2() {
+			var phone2_imgs = document.getElementById('phone2_imgs');
+
+			setInterval(function() {
+				if(home_support.page2ImgIndex == 3) {
+					phone2_imgs.style.webkitTransform = 'translateX(0px)';
+					home_support.page2ImgIndex = 1;
+				} else {
+					phone2_imgs.style.webkitTransform = 'translateX(-' + 210 * home_support.page2ImgIndex + 'px)';
+					home_support.page2ImgIndex++;
+				}
+
+			}, 3000);
+		}
+
+		function animationPage3() {
+			
+		}
+
+		function animationPage4() {
+			
+		}
+
 		
 	</script>
 </body>
