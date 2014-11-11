@@ -11,6 +11,8 @@
 		overflow: hidden;
 	}
 	#pages{
+		transition: transform 1s ease;
+		-moz-transition: -moz-transform 1s ease;
 		-webkit-transition: -webkit-transform 1s ease;
 	}
 	.page{
@@ -128,6 +130,8 @@
 				this.curpage--;
 				height = this.pageHeight * (this.curpage - 1);
 				document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
+				document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
+				document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
 			}
 		},
 		sliderDown: function() {
@@ -136,6 +140,8 @@
 				this.curpage++;
 				height = this.pageHeight * (this.curpage - 1);
 				document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
+				document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
+				document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
 			}
 		},
 		startPageAnimation: function() {
