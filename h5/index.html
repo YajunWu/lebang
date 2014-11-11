@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+	<title>我们的乐邦</title>
+	<link rel='stylesheet' href="css/basic.css">
+	<style type="text/css">
+	#first-page{
+		background-color: rgba(231, 212, 191, 1);
+		margin-top: 60px;
+        background-image:url("images/beijing.jpg");
+
+	}
+	#second-page{
+		background-color: #330;
+	}
+	#third-page{
+		background-color: #033;
+	}
+	#forth-page{
+		background-color: #303;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="title">
+			<span>logo</span>你帮我帮大家帮
+		</div>
+		<ul id="nav">
+			<li class="active">首页</li>
+			<li>详细</li>
+			<li>问题反馈</li>
+			<li>帮助</li>
+		</ul>
+	</header>
+
+	<section id="first-page" class="page">
+
+	</section>
+
+	<section id="second-page" class="page">
+
+	</section>
+
+	<section id="third-page" class="page">
+
+	</section>
+
+	<section id="forth-page" class="page">
+
+	</section>
+
+<script type="text/javascript">
+
+	window.onload = function() {
+		init();
+		animate();
+	}
+
+	function init() {
+		setPageSize();
+	}
+
+	function setPageSize() {
+		var sections = document.getElementsByClassName('page');
+		var height = window.screen.availHeight - 60 + 'px';
+		var curpage = 1;
+		for(var len = sections.length - 1; len >= 0; len--) {
+			sections[len].style.height =  height;
+		}
+	}
+
+	function animate() {
+		headerHover();
+		slider();
+	}
+	function headerHover() {
+		var nav = document.getElementById('nav');
+		nav.onclick = function(e) {
+			var event = e || window.event;
+			var target = e.srcElement || e.target;
+			var curActiveLi = nav.getElementsByClassName('active');
+			var lis = nav.childNodes;
+			if(curActiveLi.length > 0)
+				curActiveLi[0].className = '';
+			target.className = 'active';
+			switch(target.innerHTML) {
+				case '首页':
+					console.log('首页');
+					break;
+				case '详细':
+					console.log('详细');
+					break;
+				case '问题反馈':
+					console.log('问题反馈');
+					break;
+				case '帮助':
+					console.log('帮助');
+					break;
+				default: 
+					console.log('换页咯！');
+			}
+		}
+	}
+	function slider() {
+
+		 var scrollFunc=function(e){
+            e=e || window.event;
+            if(e.wheelDelta){//IE/Opera/Chrome
+                if(e.wheelDelta==120)
+                {
+                  //向上滚动事件
+                  // alert(e.wheelDeta +"向上");
+                     curpage = sections[len--];
+                }else
+                {
+                    //向下滚动事件
+                    //alert(e.wheelDeta +"向上");
+                    curpage = sections[len++];
+                }
+            }else if(e.detail){
+                //Firefox
+                if(e.detail==-3) {
+                     //向上滚动事件<br>
+                      //alert(e.detail +"向上");
+                    curpage = sections[len--];
+                }else {
+                   //向下滚动事件<br>
+                    //alert(e.detail +"向下 ");
+                    curpage = sections[len++];
+                }
+            }
+        };
+        if(document.addEventListener){
+           //adding the event listerner for Mozilla
+            document.addEventListener("DOMMouseScroll" ,scrollFunc, false);
+        }
+           //IE/Opera/Chrome
+        window.onmousewheel=document.onmousewheel=scrollFunc;
+	}
+</script>
+</body>
+</html>

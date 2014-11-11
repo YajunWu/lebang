@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+	<title>我们的乐邦</title>
+	<link rel='stylesheet' href="css/basic.css">
+	<style type="text/css">
+	#content{
+		overflow: hidden;
+	}
+	#pages{
+		-webkit-transition: -webkit-transform 1s ease;
+	}
+	.page{
+		text-align: center;
+		position: relative;
+	}
+	#first-page{
+		background-color: rgba(231, 212, 191, 1);
+        background-image:url("images/beijing.jpg");
+        background-size: cover;
+        margin-top: 60px;
+	}
+	#second-page{
+		background-color: #330;
+	}
+	#third-page{
+		background-color: #033;
+	}
+	#forth-page{
+		background-color: #303;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="title">
+			<span>logo</span>你帮我帮大家帮
+		</div>
+		<ul id="nav">
+			<li class="active">首页</li>
+			<li>详细</li>
+			<li>问题反馈</li>
+			<li>帮助</li>
+		</ul>
+	</header>
+
+	<div id="content">
+	<div id="pages">
+		<section id="first-page" class="page">
+
+		</section>
+
+		<section id="second-page" class="page">
+
+		</section>
+
+		<section id="third-page" class="page">
+
+		</section>
+
+		<section id="forth-page" class="page">
+
+		</section>
+	</div>
+</div>
+<script type="text/javascript" src="js/basic.js"></script>
+<script type="text/javascript">
+
+	window.onload = function() {
+		home_support.setPageSize();
+		basic.headerHover();
+		sliderAction();
+		
+	}
+
+	function sliderAction() {
+		window.onkeydown = function(e) {
+			var e = e || window.event;
+			if(e.keyCode == 38){
+				//上
+				home_support.sliderUp();
+			} else if(e.keyCode == 40) {
+				//下
+				home_support.sliderDown();
+			}
+			home_support.startPageAnimation();
+
+		}
+		window.onmousewheel = function(e) {
+			var e = e || window.event;
+			if(e.wheelDelta) {//IE/Opera/Chrome
+                if(e.wheelDelta==120) {
+                    //上
+                    home_support.sliderUp();
+                }else {
+                    //下
+                    home_support.sliderDown();
+                }
+            }else if(e.detail) {//Firefox
+                if(e.detail==-3) {
+                    //上
+                    home_support.sliderUp();
+                }else {
+                    //下
+                    home_support.sliderDown();
+                }
+            }
+            home_support.startPageAnimation();
+		}
+	}
+	var home_support = {
+		curpage: 1,
+		pageHeight: 0,
+		setPageSize: function() {
+			var sections = document.getElementsByClassName('page');
+			this.pageHeight = window.screen.availHeight - 60;
+			document.getElementById('content').style.height = this.pageHeight - 1 + 'px';
+			for(var len = sections.length - 1; len >= 0; len--) {
+				sections[len].style.height =  this.pageHeight + 'px';
+			}
+		},
+		sliderUp: function() {
+			var height;
+			if(this.curpage > 1) {
+				this.curpage--;
+				height = this.pageHeight * (this.curpage - 1);
+				document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
+			}
+		},
+		sliderDown: function() {
+			var height;
+			if(this.curpage < 4) {
+				this.curpage++;
+				height = this.pageHeight * (this.curpage - 1);
+				document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
+			}
+		},
+		startPageAnimation: function() {
+			switch(this.curpage) {
+				case 1: 
+
+					break;
+				case 2: 
+
+					break;
+				case 3:
+
+					break;
+				case 4: 
+
+					break;
+				default:
+
+					console.log('which page?');
+			}
+		}
+	}
+	
+</script>
+</body>
+</html>
