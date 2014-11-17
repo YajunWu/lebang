@@ -1,0 +1,530 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+	<title>我们的乐邦</title>
+	<style type="text/css">
+    @-webkit-keyframes titleScale {
+        from{
+            background-position: 0 0;
+        }
+        to{
+            background-position: -100% 0;
+        }
+    }
+    @-webkit-keyframes upDown {
+        from{
+            -webkit-transform: translateY(0);
+        }
+        to{
+            -webkit-transform: translateY(-376px);
+        }
+    }
+	body{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: #fbb96e;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        line-height: 40px;
+        /*border-bottom: 3px solid rgba(240, 249, 249, 1);*/
+        background-color:rgb(105, 85, 33);
+        color: #DFDFC7;
+        z-index: 100;
+    }
+    
+    #title{
+        display: inline-block;
+        float: left;
+        margin-top: 10px;
+        margin-left: 120px;
+    }
+    #title>span{
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+	#content{
+
+		overflow: hidden;
+	}
+	#pages{
+		transition: transform 1s ease;
+		-moz-transition: -moz-transform 1s ease;
+		-webkit-transition: -webkit-transform 1s ease;
+	}
+	.page{
+		/*display: -webkit-box;
+		-webkit-box-align: center;*/
+		text-align: center;
+		position: relative;
+	}
+	#first-page{
+        padding-top: 60px;
+		background-color: rgba(231, 212, 191, 1);
+        background-image:url("images/5.jpg");
+        background-size: cover;
+	}
+	#second-page{
+		background-color:#e6f4b6;
+	}
+	#third-page{
+        padding: 20px 50px;
+        box-sizing: border-box;
+        background-color: lightcyan;
+    }
+	#forth-page{
+		background-color: #fbb96e;
+	}
+    #fifth-page {
+        background-color:#eee;
+    }
+    #first-img{
+        float: left;
+        margin: 50px auto 20px;
+        width: 55%;
+        opacity: 0;
+        -webkit-transform: translateX(-800px);
+        -webkit-transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
+        text-align: right;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    #first-text{
+        float: right;
+        width: 45%;
+        padding-left: 80px;
+        margin-top: 180px;
+        box-sizing: border-box;
+        opacity: 0;
+        -webkit-transform: translateX(800px);
+        -webkit-transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
+        color: #333;
+        text-align: left;
+    }
+    #first-text .title{
+        font-size: 100px;
+        font-weight: bolder;
+    }
+    #download{
+        background-color: #D80A0A;
+        border-radius: 6px;
+        padding: 20px 42px;
+        font-size: 30px;
+        color: #F5DCD9;
+        font-weight: bold;
+        margin: 20px 0px;
+        display: inline-block;
+    }
+    #third-img{
+        margin: 20px auto;
+        width: 600px;
+        opacity: 0;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
+        position: relative;
+    }
+    #third-main{
+        width: 100%;
+
+    }
+    #phone3{
+        background-color: #fff;
+        width: 197px;
+        position: absolute;
+        top: 86px;
+        left: 195px;
+        height: 330px;
+        overflow: hidden;
+    }
+    #phone3-img{
+        width: 197px;
+        /*-webkit-transform: translateY(0);
+        transition: transform 1s ease;
+        -moz-transition: -moz-transform 1s ease;
+        -webkit-transition: -webkit-transform 1s ease;*/
+        -webkit-animation: upDown 3s linear alternate infinite;
+    }
+    #forth-page{
+        padding: 20px 50px;
+        box-sizing: border-box;
+        background-color: thistle;
+    }
+   
+    #forth-text{
+        float: left;
+        width: 55%;
+        padding-right: 40px;
+        margin-top: 120px;
+        box-sizing: border-box;
+        opacity: 0;
+        -webkit-transform: translateX(-800px);
+        -webkit-transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
+        color: #333;
+        text-align: right;
+    }
+    #forth-text .title{
+        font-size: 60px;
+        font-weight: bolder;
+        background-image: -webkit-linear-gradient(left, #0aa, #aa0 25%, #383 50%, #a6a 75%, #e44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: titleScale 2s linear infinite;
+    }
+    #forth-text span{
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+        margin: 20px;
+        
+    }
+    #forth-img{
+        float: right;
+        margin: 20px auto 20px;
+        width: 45%;
+        opacity: 0;
+        -webkit-transform: translateX(800px);
+        -webkit-transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
+        text-align: left;
+    }
+    #forth-img img{
+        width: 90%;
+
+    }
+    #fifth-title {
+        font-size: 48px;
+        font-weight: bolder;
+        height: 80px;
+        line-height: 100px;
+        text-shadow: 5px 5px 13px #E1F38B;
+    }
+    .bm-title {
+        margin: 0 auto;
+        color: #000000;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 50px;
+    }
+    .bm-rtitle {
+        margin: 0 auto;
+        color: #5E5B66;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    .bm-border1 {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border: 1px solid #6D6878;
+        display: inline-block;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    .bm-border1:hover{
+     background-color: rgba(239, 244, 100, 1);
+    }
+    .bm-line {
+        border-bottom: 1px solid #CBC3E1;
+        width: 100%;
+        margin-bottom: 10px;
+        position: relative;
+        top: 25px;
+    }
+    .bm-tip{
+        color:#5E5B66;
+        font-size: 14px;
+        position: relative;
+        top: 10px;
+        z-index: 99;
+        background: #EBF2BB;
+        width: 280px;
+        margin-left: 40%;
+    }
+    .footer_wrap{
+        position:relative;
+        bottom: 0px;
+        z-index: 999;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .footer-tip {
+        color: #5E5B66;
+        text-decoration: none;
+    }
+    .footer-tip1 {
+        color: #A19DA9;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .icon {
+        width: 120px;
+        height: 140px;
+        padding: 50px;
+    }
+
+	</style>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <span>logo</span>你帮我帮大家帮
+        </div>
+    </header>
+	<div id="content">
+		<div id="pages">
+			<section id="first-page" class="page">
+                <div id="first-img">
+                    <img src="images/mainFunc.png">
+                </div>
+                <div id="first-text">
+                    <div class="title">乐邦</div>
+                    <span id="download">立即下载</span>
+                </div>
+			</section>
+
+			<section id="second-page" class="page">
+                
+				
+               
+			</section>
+
+			<section id="third-page" class="page">
+                <div id="third-img">
+                    <img src="images/mainFunc.png" id="third-main">
+                    <div id="phone3">
+                    <img src="images/line.png" id="phone3-img" >
+                </div>
+                </div>
+                
+			</section>
+
+			<section id="forth-page" class="page">
+                
+                <div id="forth-text">
+                    <div class="title">广告口号</div>
+                    <span>如何吸引用户眼球</span>
+                    <span>如何吸引用户眼球呢？哈哈哈</span>
+                    <span>如何吸引用户眼球啦？？？嘻嘻</span>
+                </div>
+                <div id="forth-img">
+                    <img src="images/adver.png">
+                </div>
+			</section>
+
+            <section id="fifth-page" class="page">
+                <div class="bm-title" id="fifth-title">根据手机 提供免费下载</div>
+                <div class="bm-rtitle" id="">也可在Appstore、安卓市场，直接搜索乐邦</div>
+
+                <ul>
+                    <li class="bm-border1"><img src="images/icon1.png" class="icon" ></li>
+                    <li class="bm-border1"><img src="images/icon2.png"  class="icon"></li>
+                    <li class="bm-border1"><img src="images/icon3.png"  class="icon"></li>
+                </ul>
+                <div class="bm-line"><div class="bm-tip">可以通过以上三种方式进行下载</div></div>
+
+                <div class="footer_wrap">
+                            <!-- <p>
+                                <a href="#" class="footer-tip">阿里巴巴集团</a>
+                                <b>|</b>
+                                <a href="#" class="footer-tip">乐邦</a>
+                            </p> -->
+                        <div class="footer-tip1">乐邦 © 2014 </div>
+                    </div>
+            </section>
+
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		window.onload = function() {
+			home_support.setPageSize();
+			sliderAction();
+            animationPage1(1,0);
+		}
+
+		function sliderAction() {
+			window.onkeydown = function(e) {
+				var e = e || window.event;
+				if(e.keyCode == 38){
+					//上
+					home_support.sliderUp();
+				} else if(e.keyCode == 40) {
+					//下
+					home_support.sliderDown();
+				}
+				home_support.startPageAnimation();
+
+			}
+			window.onmousewheel = function(e) {
+				var e = e || window.event;
+				if(e.wheelDelta) {//IE/Opera/Chrome
+	                if(e.wheelDelta==120) {
+	                    //上
+	                    home_support.sliderUp();
+	                }else {
+	                    //下
+	                    home_support.sliderDown();
+	                }
+	            }else if(e.detail) {//Firefox
+	                if(e.detail==-3) {
+	                    //上
+	                    home_support.sliderUp();
+	                }else {
+	                    //下
+	                    home_support.sliderDown();
+	                }
+	            }
+	            home_support.startPageAnimation();
+			}
+		}
+
+		var home_support = {
+			page2ImgIndex: 1,
+			curpage: 1,
+			pageHeight: 0,
+			setPageSize: function() {
+				var sections = document.getElementsByClassName('page');
+				this.pageHeight = window.innerHeight - 60;//window.screen.availHeight;
+				document.getElementById('content').style.height = this.pageHeight + 59 + 'px';
+				for(var len = sections.length - 1; len >= 0; len--) {
+					sections[len].style.height =  this.pageHeight + 'px';
+				}
+			},
+			sliderUp: function() {
+				var height;
+				if(this.curpage > 1) {
+					this.curpage--;
+					height = this.pageHeight * (this.curpage - 1);
+					document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
+					document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
+					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
+				}
+                if(this.curpage == 2) {
+                    setTimeout('animationPage3(0, 0.2)', 500);
+                }
+                if(this.curpage == 3) {
+                    setTimeout('animationPage4(0, 800)', 500);
+                }
+			},
+			sliderDown: function() {
+				var height;
+				if(this.curpage < 5) {
+					this.curpage++;
+					height = this.pageHeight * (this.curpage - 1);
+					document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
+					document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
+					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
+				}
+                if(this.curpage == 2) {
+                    setTimeout('animationPage1(0, 800)', 500);
+                }
+                if(this.curpage == 4) {
+                    setTimeout('animationPage3(0, 0.2)', 500);
+                }
+                if(this.curpage == 5) {
+                    setTimeout('animationPage4(0, 800)', 500);
+                }
+			},
+			startPageAnimation: function() {
+				switch(this.curpage) {
+					case 1: 
+						animationPage1(1,0);
+						break;
+					case 2:
+                        //initSection2();
+						animationPage2();
+						break;
+					case 3:
+						animationPage3(1,1);
+						break;
+					case 4: 
+						animationPage4(1,0);
+						break;
+                    case 5:
+                        animationPage5();
+                        break;
+					default:
+
+						console.log('which page?');
+				}
+			}
+		}
+
+		function animationPage1(x, y) {
+            document.getElementById('first-img').style.opacity = x;
+            document.getElementById('first-img').style.webkitTransform = 'translateX(-'+y+'px)';
+            document.getElementById('first-text').style.opacity = x;
+            document.getElementById('first-text').style.webkitTransform = 'translateX('+y+'px)';
+		}
+
+        function initSection2() {
+            for(var i= 2; i<=6;i++){
+             document.getElementById('circle'+i+'').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+             document.getElementById('circle'+i+'').style.msTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+             document.getElementById('circle'+i+'').style.mozTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+             document.getElementById('circle'+i+'').style.oTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+            }
+        }
+
+
+		function animationPage2() {
+			// var phone2_imgs = document.getElementById('phone2_imgs');
+   //          var knockInterval;
+   //                  knockInterval = window.setInterval(function(){
+   //                      if(home_support.page2ImgIndex == 3) {
+   //                          document.getElementById('circle2').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*2/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*2/ 360))*200+'px)';
+   //                          document.getElementById('circle2').style.backgroundColor='#F3C3E5';
+   //                          phone2_imgs.style.webkitTransform = 'translateX(0px)';
+   //                          document.getElementById('circle3').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*3/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*3/ 360))*200+'px) scale(1.25)';
+   //                          document.getElementById('circle3').style.backgroundColor='#EAF81C';
+   //                          home_support.page2ImgIndex = 1;
+   //                      } else if(home_support.page2ImgIndex == 2){
+   //                          document.getElementById('circle1').style.backgroundColor='#F3C3E5';
+   //                          document.getElementById('circle1').style.webkitTransform = 'scale(1)';
+   //                          phone2_imgs.style.webkitTransform = 'translateX(-' + 210 * home_support.page2ImgIndex + 'px)';
+   //                          document.getElementById('circle2').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*home_support.page2ImgIndex/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*home_support.page2ImgIndex/ 360))*200+'px) scale(1.25)';
+   //                          document.getElementById('circle2').style.backgroundColor='#EAF81C';
+   //                          home_support.page2ImgIndex++;
+   //                      } else if(home_support.page2ImgIndex == 1){
+   //                          document.getElementById('circle3').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*3/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*3/ 360))*200+'px)';
+   //                          document.getElementById('circle3').style.backgroundColor='#F3C3E5';
+   //                          phone2_imgs.style.webkitTransform = 'translateX(-' + 210 * home_support.page2ImgIndex + 'px)';
+   //                          document.getElementById('circle1').style.webkitTransform = 'scale(1.25)';
+   //                          document.getElementById('circle1').style.backgroundColor='#EAF81C';
+   //                          home_support.page2ImgIndex++;
+   //                      }
+   //                  },3000);
+		}
+
+
+        function animationPage3(x, y) {
+            document.getElementById('third-img').style.opacity = x;
+            document.getElementById('third-img').style.webkitTransform = 'scale('+y+')';
+        }
+
+		function animationPage4(x, y) {
+            document.getElementById('forth-img').style.opacity = x;
+            document.getElementById('forth-img').style.webkitTransform = 'translateX('+y+'px)';
+            document.getElementById('forth-text').style.opacity = x;
+            document.getElementById('forth-text').style.webkitTransform = 'translateX(-'+y+'px)';
+		}
+
+        function animationPage5() {
+
+        }
+		
+	</script>
+</body>
+</html>
