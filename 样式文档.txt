@@ -1,0 +1,27 @@
+    .line1{
+        background-position: -143px -280px;
+        top:35%;
+        left:680px;
+    }
+    .line2{
+        background-position: -143px -450px;
+        top:58%;
+        left:680px;
+    }
+   .line{
+       background-image: url("images/line.png");
+       position: absolute;
+       width: 90px;
+       height: 90px;
+   }
+
+    .line3{
+        background-position: -143px -280px;
+        top:35%;
+        left:980px;
+    }
+    .line4{
+        background-position: -143px -450px;
+        top:58%;
+        left:980px;
+    }

@@ -97,7 +97,7 @@
                 if(e.wheelDelta==120) {
                     //上
                     home_support.sliderUp();
-                }else {
+                }else if(e.wheelDelta==-120) {
                     //下
                     home_support.sliderDown();
                 }
@@ -113,6 +113,9 @@
             home_support.startPageAnimation();
 		}
 	}
+
+
+
 	var home_support = {
 		curpage: 1,
 		pageHeight: 0,
@@ -129,9 +132,9 @@
 			if(this.curpage > 1) {
 				this.curpage--;
 				height = this.pageHeight * (this.curpage - 1);
-				document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
-				document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
-				document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
+				document.getElementById('pages').style.webkitTransform = 'translateY('+height+'px)';
+				document.getElementById('pages').style.transform = 'translateY('+height+'px)';
+				document.getElementById('pages').style.mozTransform = 'translateY('+height+'px)';
 			}
 		},
 		sliderDown: function() {

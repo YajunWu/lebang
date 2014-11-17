@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="content-script-type" content="text/javascript">
@@ -33,14 +33,17 @@
         background-size: cover;
 	}
 	#second-page{
-		background-color: #330;
+		background-color:#e6f4b6;
 	}
 	#third-page{
 		background-color: #033;
 	}
 	#forth-page{
-		background-color: #303;
+		background-color: #fbb96e;
 	}
+    #fifth-page {
+        background-color:#EBF2BB;
+    }
 	#phone2{
 		position: absolute;
 		top: 50%;
@@ -76,6 +79,385 @@
 		height: 367px;
 		float: left;
 	}
+    .circle1 {
+        position:absolute;
+        border-radius: 50%;
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: white;
+        top: 35%;
+        left: 756px;
+        width: 130px;
+        height: 130px;
+        background-color:#F3C3E5;
+        z-index: 99;
+    }
+ #circle2 {
+     transform:scale(2,4);
+     -ms-transform:scale(2,4); /* IE 9 */
+     -moz-transform:scale(2,4); /* Firefox */
+     -webkit-transform:scale(2,4); /* Safari and Chrome */
+     -o-transform:scale(2,4); /* Opera */
+ }
+
+    @keyframes titleScale {
+
+    }
+    @-webkit-keyframes titleScale {
+        from{
+            /*color:#fbb96e;*/
+            /*text-shadow: 2px 2px 13px #aa0;*/
+            background-position: 0 0;
+        }
+        to{
+            /*color:#f00;*/
+            /*text-shadow: 2px 2px 13px #aa0;*/
+            background-position: -100% 0;
+        }
+    }
+    #third-page{
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: lightcyan;
+    }
+    .page-left{
+        float: left;
+        width: 50%;
+        text-align: right;
+    }
+    .page-right{
+        float: right;
+        width:50%;
+        text-align: left;
+        padding-left: 50px;
+        box-sizing: border-box;
+    }
+    #third-title{
+        font-size: 48px;
+        font-weight: bolder;
+        margin: 20px 0 40px;
+        height: 40px;
+        line-height: 40px;
+        text-shadow: 2px 2px 13px #aa0;
+    }
+    #fifth-title{
+        font-size: 48px;
+        font-weight: bolder;
+        height: 80px;
+        line-height: 100px;
+        text-shadow: 5px 5px 13px #E1F38B;
+    }
+    .caseTitle{
+        margin: 20px;
+        height: 120px;
+    }
+    .caseTitle .title{
+
+        font-size: 30px;
+        font-weight: bold;
+
+        /*text-indent: 20px;*/
+        background-image: -webkit-linear-gradient(left, #0aa, #aa0 25%, #383 50%, #a6a 75%, #e44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: titleScale 2s linear infinite;
+    }
+    .caseTitle>span{
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+        /*text-indent: 30px ;*/
+        padding: 10px;
+    }
+
+    .caseImg>img{
+        width: 300px;
+        height: 120px;
+        margin: 10px;
+    }
+    .caseImg:first-child{
+        margin-top: 100px;
+    }
+    #case1-title{
+        /*color: darkorchid;*/
+        margin-top:70px;
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-out;
+    }
+    #case2-title{
+        /*color: darkturquoise;*/
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .1s;
+    }
+    #case3-title{
+        /*color: darkorange;*/
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #case1-img{
+        -webkit-transform: translateX(1000px);
+        -webkit-transition: -webkit-transform .8s ease-in;
+    }
+    #case2-img{
+        -webkit-transform: translateX(1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .1s;
+    }
+    #case3-img{
+        -webkit-transform: translateX(1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+
+    #forth-page{
+        padding: 20px 50px;
+        box-sizing: border-box;
+        background-color: thistle;
+    }
+    #forth-title{
+        font-size: 48px;
+        font-weight: bolder;
+        margin: 20px 0 40px;
+        line-height: 40px;
+        text-shadow: 2px 2px 13px #e5c;
+        padding-left: 40%;
+    }
+    .forth-content{
+        height: 120px;
+        margin: 30px;
+        overflow: hidden;
+    }
+    .forth-content .title{
+        font-size: 30px;
+        font-weight: bold;
+
+        text-indent: 20px;
+        background-image: -webkit-linear-gradient(left, #0aa, #aa0 25%, #383 50%, #a6a 75%, #e44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: titleScale 2s linear infinite;
+    }
+    .forth-content span{
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+        text-indent: 30px ;
+        padding: 10px;
+    }
+    .forth-content img {
+        width: 340px;
+        height: 120px;
+    }
+    #forth-text1{
+        float: right;
+        width: 45%;
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 30px;
+        box-sizing: border-box;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-img1{
+        float: left;
+        width: 55%;
+        text-align: right;
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-text2{
+        float: left;
+        width: 45%;
+        margin-top: 20px;
+        text-align: right;
+        padding-right: 30px;
+        box-sizing: border-box;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-img2{
+        float: right;
+        padding-left: 20px;
+        width: 55%;
+        text-align: left;
+        box-sizing: border-box;
+        -webkit-transform: translateX(1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-text3{
+        float: right;
+        width: 45%;
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 30px;
+        box-sizing: border-box;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-img3{
+        float: left;
+        width: 55%;
+        text-align: right;
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }		#forth-page{
+                 padding: 20px 50px;
+                 box-sizing: border-box;
+                 background-color: thistle;
+             }
+    #forth-title{
+        font-size: 48px;
+        font-weight: bolder;
+        margin: 20px 0 40px;
+        line-height: 40px;
+        text-shadow: 2px 2px 13px #e5c;
+        padding-left: 40%;
+    }
+    .forth-content{
+        height: 120px;
+        margin: 30px;
+        overflow: hidden;
+    }
+    .forth-content .title{
+        font-size: 30px;
+        font-weight: bold;
+
+        text-indent: 20px;
+        background-image: -webkit-linear-gradient(left, #0aa, #aa0 25%, #383 50%, #a6a 75%, #e44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: titleScale 2s linear infinite;
+    }
+    .forth-content span{
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+        text-indent: 30px ;
+        padding: 10px;
+    }
+    .forth-content img {
+        width: 340px;
+        height: 120px;
+    }
+    #forth-text1{
+        float: right;
+        width: 45%;
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 30px;
+        box-sizing: border-box;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-img1{
+        float: left;
+        width: 55%;
+        text-align: right;
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-text2{
+        float: left;
+        width: 45%;
+        margin-top: 20px;
+        text-align: right;
+        padding-right: 30px;
+        box-sizing: border-box;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-img2{
+        float: right;
+        padding-left: 20px;
+        width: 55%;
+        text-align: left;
+        box-sizing: border-box;
+        -webkit-transform: translateX(1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-text3{
+        float: right;
+        width: 45%;
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 30px;
+        box-sizing: border-box;
+        -webkit-transform: scale(0.2);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    #forth-img3{
+        float: left;
+        width: 55%;
+        text-align: right;
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .8s ease-in .2s;
+    }
+    .bm-title {
+        margin: 0 auto;
+        color: #000000;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 50px;
+    }
+    .bm-rtitle {
+        margin: 0 auto;
+        color: #5E5B66;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    .bm-border1 {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border: 1px solid #6D6878;
+        display: inline-block;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    .bm-border1:hover{
+     background-color: rgba(239, 244, 100, 1);
+    }
+    .bm-line {
+        border-bottom: 1px solid #CBC3E1;
+        width: 100%;
+        margin-bottom: 10px;
+        position: relative;
+        top: 25px;
+    }
+    .bm-tip{
+        color:#5E5B66;
+        font-size: 14px;
+        position: relative;
+        top: 10px;
+        z-index: 99;
+        background: #EBF2BB;
+        width: 280px;
+        margin-left: 40%;
+    }
+    .footer_wrap{
+        position:relative;
+        bottom: 0px;
+        z-index: 999;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .footer-tip {
+        color: #5E5B66;
+        text-decoration: none;
+    }
+    .footer-tip1 {
+        color: #A19DA9;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .icon {
+        width: 120px;
+        height: 140px;
+        padding: 50px;
+    }
+
 	</style>
 </head>
 <body>
@@ -101,15 +483,97 @@
 						</ul>
 					</div>
 				</div>
+                <div class="circle1" id="circle1">1</div>
+                <div class="circle1" id="circle2">2</div>
+                <div class="circle1" id="circle3">3</div>
+                <div class="circle1" id="circle4">4</div>
+                <div class="circle1" id="circle5">5</div>
+                <div class="circle1" id="circle6">6</div>
 			</section>
 
 			<section id="third-page" class="page">
-
+                <div class="page-left">
+                    <div id="third-title">神马是正确的求助方式</div>
+                    <div id="case1-title" class="caseTitle">
+                        <div class="title">人人都爱萌妹子</div>
+                        <span>别忘卖萌哟！~v~别忘卖萌哟！~v~</span>
+                    </div>
+                    <div id="case2-title" class="caseTitle">
+                        <div class="title">千万别跟我谈钱</div>
+                        <span>伦家才不是为了悬赏才帮忙的呢！‘_‘</span>
+                    </div>
+                    <div id="case3-title" class="caseTitle">
+                        <div class="title">我的语文不是美术师教的</div>
+                        <span>需求要表达清楚哦！(@_@)~~</span>
+                    </div>
+                </div>
+                <div class="page-right">
+                    <div id="case1-img" class="caseImg">
+                        <img src="images/1.png" alt="third-page-case1"/>
+                    </div>
+                    <div id="case2-img" class="caseImg">
+                        <img src="images/2.jpg" alt="third-page-case2"/>
+                    </div>
+                    <div id="case3-img" class="caseImg">
+                        <img src="images/3.jpg" alt="third-page-case3"/>
+                    </div>
+                </div>
 			</section>
 
 			<section id="forth-page" class="page">
-
+                <div id="forth-title">
+                    你能得到什么？
+                </div>
+                <div id="forth-content1" class="forth-content">
+                    <div id="forth-text1">
+                        <div class="title">逼格的提升</div>
+                        <span>我的名字是红领巾</span>
+                    </div>
+                    <div id="forth-img1" class="forth-img">
+                        <img src="images/1.png" alt="forth-page-case1"/>
+                    </div>
+                </div>
+                <div id="forth-content2" class="forth-content">
+                    <div id="forth-text2">
+                        <div class="title">逼格的提升</div>
+                        <span>我的名字是红领巾</span>
+                    </div>
+                    <div id="forth-img2" class="forth-img">
+                        <img src="images/2.jpg" alt="forth-page-case2"/>
+                    </div>
+                </div>
+                <div id="forth-content3" class="forth-content">
+                    <div id="forth-text3">
+                        <div class="title">逼格的提升</div>
+                        <span>我的名字是红领巾</span>
+                    </div>
+                    <div id="forth-img3" class="forth-img">
+                        <img src="images/3.jpg" alt="forth-page-case3"/>
+                    </div>
+                </div>
 			</section>
+
+            <section id="fifth-page" class="page">
+                <div class="bm-title" id="fifth-title">根据手机 提供免费下载</div>
+                <div class="bm-rtitle" id="">也可在Appstore、安卓市场，直接搜索乐邦</div>
+
+                <ul>
+                    <li class="bm-border1"><img src="images/icon1.png" class="icon" ></li>
+                    <li class="bm-border1"><img src="images/icon2.png"  class="icon"></li>
+                    <li class="bm-border1"><img src="images/icon3.png"  class="icon"></li>
+                </ul>
+                <div class="bm-line"><div class="bm-tip">可以通过以上三种方式进行下载</div></div>
+
+                <div class="footer_wrap">
+                            <p>
+                                <a href="#" class="footer-tip">阿里巴巴集团</a>
+                                <b>|</b>
+                                <a href="#" class="footer-tip">乐邦</a>
+                            </p>
+                        <div class="footer-tip1">阿里巴巴集团旗下网站：乐邦 © 2014 </div>
+                    </div>
+            </section>
+
 		</div>
 	</div>
 	<script type="text/javascript">
@@ -161,7 +625,7 @@
 			pageHeight: 0,
 			setPageSize: function() {
 				var sections = document.getElementsByClassName('page');
-				this.pageHeight = document.body.scrollHeight;//window.screen.availHeight;
+				this.pageHeight = window.innerHeight;//window.screen.availHeight;
 				document.getElementById('content').style.height = this.pageHeight - 1 + 'px';
 				for(var len = sections.length - 1; len >= 0; len--) {
 					sections[len].style.height =  this.pageHeight + 'px';
@@ -176,65 +640,119 @@
 					document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
 					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
 				}
+                if(this.curpage == 2) {
+                    setTimeout('animationPage3(1000)', 500);
+                }
+                if(this.curpage == 3) {
+                    setTimeout('animationPage4(1000, 0.2)', 500);
+                }
 			},
 			sliderDown: function() {
 				var height;
-				if(this.curpage < 4) {
+				if(this.curpage < 5) {
 					this.curpage++;
 					height = this.pageHeight * (this.curpage - 1);
 					document.getElementById('pages').style.transform = 'translateY('+(-height)+'px)';
 					document.getElementById('pages').style.mozTransform = 'translateY('+(-height)+'px)';
 					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
 				}
+                if(this.curpage == 4) {
+                    setTimeout('animationPage3(1000)', 500);
+                }
+                if(this.curpage == 5) {
+                    setTimeout('animationPage4(1000,0.2)', 500);
+                }
 			},
 			startPageAnimation: function() {
 				switch(this.curpage) {
 					case 1: 
 						animationPage1();
 						break;
-					case 2: 
+					case 2:
+                        initSection2();
 						animationPage2();
 						break;
 					case 3:
-						animationPage3();
+						animationPage3(0);
 						break;
 					case 4: 
-						animationPage4();
+						animationPage4(0,1);
 						break;
+                    case 5:
+                        animationPage5();
+                        break;
 					default:
 
 						console.log('which page?');
 				}
 			}
 		}
-	
+
 		function animationPage1() {
 
 		}
 
+        function initSection2() {
+            for(var i= 2; i<=6;i++){
+             document.getElementById('circle'+i+'').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+             document.getElementById('circle'+i+'').style.msTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+             document.getElementById('circle'+i+'').style.mozTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+             document.getElementById('circle'+i+'').style.oTransform = 'translate('+(Math.cos(2*Math.PI*72*i / 360))*200+'px, '+(Math.sin(2*Math.PI*72*i / 360))*200+'px)';
+            }
+        }
+
+
 		function animationPage2() {
 			var phone2_imgs = document.getElementById('phone2_imgs');
-
-			setInterval(function() {
-				if(home_support.page2ImgIndex == 3) {
-					phone2_imgs.style.webkitTransform = 'translateX(0px)';
-					home_support.page2ImgIndex = 1;
-				} else {
-					phone2_imgs.style.webkitTransform = 'translateX(-' + 210 * home_support.page2ImgIndex + 'px)';
-					home_support.page2ImgIndex++;
-				}
-
-			}, 3000);
+            var knockInterval;
+                    knockInterval = window.setInterval(function(){
+                        if(home_support.page2ImgIndex == 3) {
+                            document.getElementById('circle2').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*2/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*2/ 360))*200+'px)';
+                            document.getElementById('circle2').style.backgroundColor='#F3C3E5';
+                            phone2_imgs.style.webkitTransform = 'translateX(0px)';
+                            document.getElementById('circle3').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*3/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*3/ 360))*200+'px) scale(1.25)';
+                            document.getElementById('circle3').style.backgroundColor='#EAF81C';
+                            home_support.page2ImgIndex = 1;
+                        } else if(home_support.page2ImgIndex == 2){
+                            document.getElementById('circle1').style.backgroundColor='#F3C3E5';
+                            document.getElementById('circle1').style.webkitTransform = 'scale(1)';
+                            phone2_imgs.style.webkitTransform = 'translateX(-' + 210 * home_support.page2ImgIndex + 'px)';
+                            document.getElementById('circle2').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*home_support.page2ImgIndex/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*home_support.page2ImgIndex/ 360))*200+'px) scale(1.25)';
+                            document.getElementById('circle2').style.backgroundColor='#EAF81C';
+                            home_support.page2ImgIndex++;
+                        } else if(home_support.page2ImgIndex == 1){
+                            document.getElementById('circle3').style.webkitTransform = 'translate('+(Math.cos(2*Math.PI*72*3/ 360))*200+'px, '+(Math.sin(2*Math.PI*72*3/ 360))*200+'px)';
+                            document.getElementById('circle3').style.backgroundColor='#F3C3E5';
+                            phone2_imgs.style.webkitTransform = 'translateX(-' + 210 * home_support.page2ImgIndex + 'px)';
+                            document.getElementById('circle1').style.webkitTransform = 'scale(1.25)';
+                            document.getElementById('circle1').style.backgroundColor='#EAF81C';
+                            home_support.page2ImgIndex++;
+                        }
+                    },3000);
 		}
 
-		function animationPage3() {
-			
+
+        function animationPage3(x) {
+            document.getElementById('case1-title').style.webkitTransform = 'translateX(-'+x+'px)';
+            document.getElementById('case2-title').style.webkitTransform = 'translateX(-'+x+'px)';
+            document.getElementById('case3-title').style.webkitTransform = 'translateX(-'+x+'px)';
+            document.getElementById('case1-img').style.webkitTransform = 'translateX('+x+'px)';
+            document.getElementById('case2-img').style.webkitTransform = 'translateX('+x+'px)';
+            document.getElementById('case3-img').style.webkitTransform = 'translateX('+x+'px)';
+        }
+
+		function animationPage4(x,y) {
+            document.getElementById('forth-img1').style.webkitTransform = 'translateX(-'+x+'px)';
+            document.getElementById('forth-img2').style.webkitTransform = 'translateX('+x+'px)';
+            document.getElementById('forth-img3').style.webkitTransform = 'translateX(-'+x+'px)';
+            document.getElementById('forth-text1').style.webkitTransform = 'scale('+y+')';
+            document.getElementById('forth-text2').style.webkitTransform = 'scale('+y+')';
+            document.getElementById('forth-text3').style.webkitTransform = 'scale('+y+')';
 		}
 
-		function animationPage4() {
-			
-		}
+        function animationPage5() {
 
+        }
 		
 	</script>
 </body>
