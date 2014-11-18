@@ -22,7 +22,7 @@
             -webkit-transform: translateY(-376px);
         }
     }
-    @-webkit-keyframes moveUpRight {
+    @-webkit-keyframes moveUpRight1 {
         0%{
             opacity: 0;
             top: 50%;
@@ -36,14 +36,118 @@
             -webkit-transform: scale(1);
         }
         20%{
-            opacity: 0.6;
+            opacity: 1;
             top: 10%;
             right: 12%;
             -webkit-transform: scale(0.3);
         }
         100%{
-            opacity: 0;
+            opacity: 1;
             top: 10%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+    }
+    @-webkit-keyframes moveUpRight2 {
+        0%{
+            opacity: 0;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        10%{
+            opacity: 1;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        20%{
+            opacity: 1;
+            top: 26%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+        100%{
+            opacity: 1;
+            top: 26%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+    }
+    @-webkit-keyframes moveUpRight3 {
+        0%{
+            opacity: 0;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        10%{
+            opacity: 1;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        20%{
+            opacity: 1;
+            top: 42%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+        100%{
+            opacity: 1;
+            top: 42%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+    }
+    @-webkit-keyframes moveUpRight4 {
+        0%{
+            opacity: 0;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        10%{
+            opacity: 1;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        20%{
+            opacity: 1;
+            top: 58%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+        100%{
+            opacity: 1;
+            top: 58%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+    }
+    @-webkit-keyframes moveUpRight5 {
+        0%{
+            opacity: 0;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        10%{
+            opacity: 1;
+            top: 50%;
+            right: 50%;
+            -webkit-transform: scale(1);
+        }
+        20%{
+            opacity: 1;
+            top: 74%;
+            right: 12%;
+            -webkit-transform: scale(0.3);
+        }
+        100%{
+            opacity: 1;
+            top: 74%;
             right: 12%;
             -webkit-transform: scale(0.3);
         }
@@ -224,8 +328,8 @@
         padding: 40px;
     }
     .second-img>img{
-        width: 200px;
-        height: 300px;
+        width: 300px;
+        height: 400px;
         border: 2px solid #F8BD63;
         position: absolute;
         top: 50%;
@@ -422,24 +526,24 @@
                 </div>
 				
                 <div id="second-img1" class="second-img">
-                    <img src="images/1.png" style="left: 25%;-webkit-transform:rotate(30deg)">
-                    <img src="images/2.jpg"  style="right: 25%; -webkit-transform:rotate(-60deg)">
+                    <img src="images/1.png" style="left: 20%;-webkit-transform:rotate(-15deg)">
+                    <img src="images/2.jpg"  style="right: 20%; -webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img2" class="second-img">
-                    <img src="images/3.jpg" style="left: 10%; -webkit-transform:rotate(30deg)">
-                    <img src="images/4.jpg"  style="left: 40%;">
-                    <img src="images/5.jpg"  style="right: 10%;-webkit-transform:rotate(-60deg)">
+                    <img src="images/3.jpg" style="left: 10%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/4.jpg"  style="left: 40%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/5.jpg"  style="right: 10%;-webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img3" class="second-img">
-                    <img src="images/1.png" style="left: 25%; -webkit-transform:rotate(30deg)">
-                    <img src="images/2.jpg"  style="right: 25%; -webkit-transform:rotate(-30deg)">
+                    <img src="images/1.png" style="left: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/2.jpg"  style="right: 20%; -webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img4" class="second-img">
-                    <img src="images/1.png" style="left: 50%; margin-left: -100px; -webkit-transform:rotate(-30deg)">
+                    <img src="images/1.png" style="left: 50%; margin-left: -100px; -webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img5" class="second-img">
-                    <img src="images/4.jpg" style="left: 25%; -webkit-transform:rotate(30deg)">
-                    <img src="images/5.jpg"  style="right: 25%; -webkit-transform:rotate(-60deg)">
+                    <img src="images/4.jpg" style="left: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/5.jpg"  style="right: 20%; -webkit-transform:rotate(-15deg)">
                 </div>
 			</section>
 
@@ -555,9 +659,11 @@
 					document.getElementById('pages').style.webkitTransform = 'translateY('+(-height)+'px)';
 				}
                 if(this.curpage == 1) {
+                    initsecond();
                     setTimeout('animationPage2(0)', 500);
                 }
                 if(this.curpage == 2) {
+                    initsecond();
                     setTimeout('animationPage3(0, 0.2)', 500);
                 }
                 if(this.curpage == 3) {
@@ -575,9 +681,11 @@
 				}
 
                 if(this.curpage == 2) {
+                    initsecond();
                     setTimeout('animationPage1(0, 800)', 500);
                 }
                 if(this.curpage == 3) {
+                    initsecond();
                     setTimeout('animationPage2(0)', 500);
                 }
                 if(this.curpage == 4) {
@@ -635,17 +743,7 @@
             var text3 = document.getElementById('second-text3');
             var text4 = document.getElementById('second-text4');
             var text5 = document.getElementById('second-text5');
-            // if(x) {
-            //     text1.style.right = '15%';
-            //     text1.style.top = '5%';
-            //     text1.style.opacity = 1;
-            //     text1.style.webkitTransform = 'scale(1)';
-            // } else {
-            //     text1.style.right = '50%';
-            //     text1.style.top = '50%';
-            //     text1.style.opacity = 0;
-            //     text1.style.webkitTransform = 'scale(0)';
-            // }
+            
             var index = 1;
              
             if(x) {
@@ -672,13 +770,24 @@
         function animationPage5() {
 
         }
-		
+		function initsecond() {
+            document.getElementById('second-img1').style.display = 'none';
+            document.getElementById('second-img2').style.display = 'none';
+            document.getElementById('second-img3').style.display = 'none';
+            document.getElementById('second-img4').style.display = 'none';
+            document.getElementById('second-img5').style.display = 'none';
+            document.getElementById('second-text1').style.webkitAnimation = '';
+            document.getElementById('second-text2').style.webkitAnimation = '';
+            document.getElementById('second-text3').style.webkitAnimation = '';
+            document.getElementById('second-text4').style.webkitAnimation = '';
+            document.getElementById('second-text5').style.webkitAnimation = '';
+        }
         function secondTextAction(i) {
             var time;
             switch(i) {
                 case 1: 
                     document.getElementById('second-img5').style.display = 'none';
-                    document.getElementById('second-text1').style.webkitAnimation = 'moveUpRight 9s ease';
+                    document.getElementById('second-text1').style.webkitAnimation = 'moveUpRight1 9s ease forwards';
                     document.getElementById('second-text5').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img1').style.display = 'block';
@@ -688,7 +797,7 @@
                     break;
                 case 2: 
                     document.getElementById('second-img1').style.display = 'none';
-                    document.getElementById('second-text2').style.webkitAnimation = 'moveUpRight 9s ease';
+                    document.getElementById('second-text2').style.webkitAnimation = 'moveUpRight2 9s ease forwards';
                     document.getElementById('second-text1').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img2').style.display = 'block';
@@ -698,7 +807,7 @@
                     break;
                 case 3: 
                     document.getElementById('second-img2').style.display = 'none';
-                    document.getElementById('second-text3').style.webkitAnimation = 'moveUpRight 10s ease';
+                    document.getElementById('second-text3').style.webkitAnimation = 'moveUpRight3 10s ease forwards';
                     document.getElementById('second-text2').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img3').style.display = 'block';
@@ -708,7 +817,7 @@
                     break;
                 case 4: 
                     document.getElementById('second-img3').style.display = 'none';
-                    document.getElementById('second-text4').style.webkitAnimation = 'moveUpRight 7s ease';
+                    document.getElementById('second-text4').style.webkitAnimation = 'moveUpRight4 7s ease forwards';
                     document.getElementById('second-text3').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img4').style.display = 'block';
@@ -718,7 +827,7 @@
                     break;
                 case 5: 
                     document.getElementById('second-img4').style.display = 'none';
-                    document.getElementById('second-text5').style.webkitAnimation = 'moveUpRight 9s ease';
+                    document.getElementById('second-text5').style.webkitAnimation = 'moveUpRight5 9s ease forwards';
                     document.getElementById('second-text4').style.webkitAnimation = '';
                     
                     setTimeout(function() {
