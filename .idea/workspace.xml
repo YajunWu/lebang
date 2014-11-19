@@ -23,10 +23,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="506" column="53" selection-start="13016" selection-end="13016" vertical-scroll-proportion="0.78500986" vertical-offset="12252" max-vertical-offset="19100">
+            <state line="462" column="0" selection-start="18961" selection-end="18964" vertical-scroll-proportion="-170.2381" vertical-offset="825" max-vertical-offset="19100">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_1117.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/index_1117.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="382" column="5" selection-start="8949" selection-end="8949" vertical-scroll-proportion="0.47698745" vertical-offset="9322" max-vertical-offset="24550">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#10;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#10;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#11;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#11;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#2;n#div#11;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#12;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#12;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#13;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#14;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#14;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/js/basic.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="206" column="56" selection-start="7566" selection-end="7566" vertical-scroll-proportion="0.0" vertical-offset="4534" max-vertical-offset="6575">
               <folding />
             </state>
           </provider>
@@ -44,7 +73,7 @@
       <file leaf-file-name="basic.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/css/basic.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="16" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="1425">
+            <state line="37" column="41" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
               <folding />
             </state>
           </provider>
@@ -62,6 +91,10 @@
       <list>
         <option value="$PROJECT_DIR$/h5/home.html" />
         <option value="$PROJECT_DIR$/h5/index.html" />
+        <option value="$PROJECT_DIR$/h5/js/basic.js" />
+        <option value="$PROJECT_DIR$/h5/css/basic.css" />
+        <option value="$PROJECT_DIR$/h5/css/main.css" />
+        <option value="$PROJECT_DIR$/h5/index_1117.html" />
       </list>
     </option>
   </component>
@@ -97,7 +130,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -186,22 +218,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/task-eraser/mylebang/lebang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -210,6 +235,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -226,6 +259,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3f070931-f797-4db0-bed7-1814979079dd" name="Default" comment="" />
@@ -242,7 +292,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.020879941" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19388516" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -266,14 +316,17 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/h5/index_1117.html</url>
+          <line>587</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/js/support.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="0" selection-start="1882" selection-end="1882" vertical-scroll-proportion="0.0" vertical-offset="2350" max-vertical-offset="3775">
@@ -325,41 +378,61 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="19" selection-start="4913" selection-end="4913" vertical-scroll-proportion="0.33212996" vertical-offset="5891" max-vertical-offset="26400" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="29" selection-start="2019" selection-end="2019" vertical-scroll-proportion="-1.3557693" vertical-offset="3180" max-vertical-offset="4450">
-          <folding />
-        </state>
+        <state line="99" column="29" selection-start="2019" selection-end="2019" vertical-scroll-proportion="-1.3557693" vertical-offset="3180" max-vertical-offset="4450" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/js/basic.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="21" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4061372" vertical-offset="225" max-vertical-offset="875" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+        <state line="243" column="19" selection-start="4913" selection-end="4913" vertical-scroll-proportion="0.33212996" vertical-offset="5891" max-vertical-offset="26400">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/css/basic.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="1425">
+        <state line="37" column="41" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="506" column="53" selection-start="13016" selection-end="13016" vertical-scroll-proportion="0.78500986" vertical-offset="12252" max-vertical-offset="19100">
+        <state line="462" column="0" selection-start="18961" selection-end="18964" vertical-scroll-proportion="-170.2381" vertical-offset="825" max-vertical-offset="19100">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/js/basic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="56" selection-start="7566" selection-end="7566" vertical-scroll-proportion="0.0" vertical-offset="4534" max-vertical-offset="6575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/index_1117.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="382" column="5" selection-start="8949" selection-end="8949" vertical-scroll-proportion="0.47698745" vertical-offset="9322" max-vertical-offset="24550">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#10;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#10;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#11;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#11;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#11;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#12;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#12;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#13;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#14;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#14;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

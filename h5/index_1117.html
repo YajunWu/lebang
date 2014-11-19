@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="content-script-type" content="text/javascript">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
+    <link type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/basic.js"></script>
 	<title>我们的乐邦</title>
 	<style type="text/css">
     @-webkit-keyframes titleScale {
@@ -39,13 +41,13 @@
             opacity: 1;
             top: 10%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
         100%{
             opacity: 1;
             top: 10%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
     }
     @-webkit-keyframes moveUpRight2 {
@@ -65,13 +67,13 @@
             opacity: 1;
             top: 26%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
         100%{
             opacity: 1;
             top: 26%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
     }
     @-webkit-keyframes moveUpRight3 {
@@ -91,13 +93,13 @@
             opacity: 1;
             top: 42%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
         100%{
             opacity: 1;
             top: 42%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
     }
     @-webkit-keyframes moveUpRight4 {
@@ -117,13 +119,13 @@
             opacity: 1;
             top: 58%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
         100%{
             opacity: 1;
             top: 58%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
     }
     @-webkit-keyframes moveUpRight5 {
@@ -143,14 +145,50 @@
             opacity: 1;
             top: 74%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
         100%{
             opacity: 1;
             top: 74%;
             right: 12%;
-            -webkit-transform: scale(0.3);
+            -webkit-transform: scale(0.5);
         }
+    }
+
+    @-webkit-keyframes swing {
+        20% {
+            -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+            opacity: 1;
+        }
+        40% {
+            -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+            opacity: 1;
+        }
+        60% {
+            -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+            opacity: 1;
+        }
+        80% {
+            -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+    }
+   .swing {
+        -webkit-transform-origin: top center;
+        -ms-transform-origin: top center;
+        transform-origin: top center;
+        -webkit-animation-name: swing;
+        animation-name: swing;
+
     }
 	body{
         width: 100%;
@@ -172,7 +210,7 @@
         color: #DFDFC7;
         z-index: 100;
     }
-    
+
     #title{
         display: inline-block;
         float: left;
@@ -267,9 +305,35 @@
         right: 50%;
         top: 50%;
         margin: -100px -150px 0 0;
-        
+        z-index: 999;
+    }
+    .second-text1{
+        width: 260px;
+        height: 200px;
+        background-color: #F8BD63;
+        border-radius: 50%;
+        border: 5px solid #E6D69A;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        margin: -100px -150px 0 0;
     }
     .second-text .title{
+        margin-top: 10px;
+        font-size: 70px;
+        font-weight: bold;
+    }
+    .second-text1 .title{
+        margin-top: 10px;
+        font-size: 70px;
+        font-weight: bold;
+    }
+    .second-text .title{
+             margin-top: 10px;
+             font-size: 70px;
+             font-weight: bold;
+         }
+    .second-text1 .title{
         margin-top: 10px;
         font-size: 70px;
         font-weight: bold;
@@ -279,6 +343,43 @@
         margin-top: 15px;
         font-size: 34px;
         line-height: 38px;
+    }
+    .second-text1>span{
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    #text1{
+        -webkit-transform: scale(0.5);
+        top: 10%;
+        right: 12%;
+        background-color: #D3D3D3;
+    }
+    #text2{
+        -webkit-transform: scale(0.5);
+        top: 26%;
+        right: 12%;
+        background-color:  #D3D3D3;
+    }
+    #text3{
+        -webkit-transform: scale(0.5);
+        top: 42%;
+        right: 12%;
+        background-color:  #D3D3D3;
+    }
+    #text4{
+        -webkit-transform: scale(0.5);
+        top: 58%;
+        right: 12%;
+        background-color:  #D3D3D3;
+    }
+    #text5{
+        -webkit-transform: scale(0.5);
+        top: 74%;
+        right: 12%;
+        background-color:  #D3D3D3;
     }
     #second-text1{
         /*-webkit-transform: scale(1);
@@ -294,7 +395,7 @@
 
         -webkit-transition: opacity 0.6s ease, top 1s ease, right 1s ease, -webkit-transform 1s ease;*/
         opacity: 0;
-        /*-webkit-animation: moveUpRight 3s ease 3s forwards infinite; */   
+        /*-webkit-animation: moveUpRight 3s ease 3s forwards infinite; */
     }
     #second-text3{
         /*-webkit-transform: scale(1);
@@ -310,7 +411,7 @@
 
         -webkit-transition: opacity 0.6s ease, top 1s ease, right 1s ease, -webkit-transform 1s ease;*/
         opacity: 0;
-        /*-webkit-animation: moveUpRight 3s ease 9s forwards infinite; */   
+        /*-webkit-animation: moveUpRight 3s ease 9s forwards infinite; */
     }
     #second-text5{
         /*-webkit-transform: scale(1);
@@ -318,23 +419,24 @@
 
         -webkit-transition: opacity 0.6s ease, top 1s ease, right 1s ease, -webkit-transform 1s ease;*/
         opacity: 0;
-        /*-webkit-animation: moveUpRight 3s ease 12s forwards infinite;*/    
+        /*-webkit-animation: moveUpRight 3s ease 12s forwards infinite;*/
     }
     .second-img{
         position: relative;
-        width: 100%;
+        width: 85%;
         display: none;
         top: 40%;
         padding: 40px;
     }
     .second-img>img{
-        width: 300px;
-        height: 400px;
+        width: 250px;
+        height: 350px;
         border: 2px solid #F8BD63;
         position: absolute;
         top: 50%;
         margin-top: -150px;
         display: inline-block;
+        opacity: 0;
     }
     #third-img{
         margin: 20px auto;
@@ -370,7 +472,7 @@
         box-sizing: border-box;
         background-color: thistle;
     }
-   
+
     #forth-text{
         float: left;
         width: 55%;
@@ -397,7 +499,6 @@
         font-weight: bold;
         display: block;
         margin: 20px;
-        
     }
     #forth-img{
         float: right;
@@ -409,8 +510,7 @@
         text-align: left;
     }
     #forth-img img{
-        width: 80%;
-
+        width: 79%;
     }
     #fifth-title {
         font-size: 48px;
@@ -457,7 +557,7 @@
         position: relative;
         top: 10px;
         z-index: 99;
-        background: #EBF2BB;
+        background: #EDEDED;
         width: 280px;
         margin-left: 40%;
     }
@@ -524,26 +624,47 @@
                     <div class="title">5</div>
                     <span>当您要送礼物的时候</span>
                 </div>
-				
+
+                <div id="text1" class="second-text1">
+                    <div class="title">1</div>
+                    <span>当您需要排队的时候</span>
+                </div>
+                <div id="text2" class="second-text1">
+                    <div class="title">2</div>
+                    <span>当您有快递要取的时候</span>
+                </div>
+                <div id="text3" class="second-text1">
+                    <div class="title">3</div>
+                    <span>当您想要有个人来陪的时候</span>
+                </div>
+                <div id="text4" class="second-text1">
+                    <div class="title">4</div>
+                    <span>当您想吃美食的时候</span>
+                </div>
+                <div id="text5" class="second-text1">
+                    <div class="title">5</div>
+                    <span>当您要送礼物的时候</span>
+                </div>
+
                 <div id="second-img1" class="second-img">
-                    <img src="images/1.png" style="left: 20%;-webkit-transform:rotate(-15deg)">
-                    <img src="images/2.jpg"  style="right: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/1.png" id="a1" style="left: 20%;-webkit-transform:rotate(-15deg)">
+                    <img src="images/2.jpg" id="a2" style="right: 20%; -webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img2" class="second-img">
-                    <img src="images/3.jpg" style="left: 10%; -webkit-transform:rotate(-15deg)">
-                    <img src="images/4.jpg"  style="left: 40%; -webkit-transform:rotate(-15deg)">
-                    <img src="images/5.jpg"  style="right: 10%;-webkit-transform:rotate(-15deg)">
+                    <img src="images/3.jpg" id="b1" style="left: 10%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/4.jpg"  id="b2" style="left: 40%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/5.jpg"  id="b3" style="right: 10%;-webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img3" class="second-img">
-                    <img src="images/1.png" style="left: 20%; -webkit-transform:rotate(-15deg)">
-                    <img src="images/2.jpg"  style="right: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/1.png" id="c1" style="left: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/2.jpg"  id="c2" style="right: 20%; -webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img4" class="second-img">
-                    <img src="images/1.png" style="left: 50%; margin-left: -100px; -webkit-transform:rotate(-15deg)">
+                    <img src="images/1.png" id="d1" style="left: 50%; margin-left: -100px; -webkit-transform:rotate(-15deg)">
                 </div>
                 <div id="second-img5" class="second-img">
-                    <img src="images/4.jpg" style="left: 20%; -webkit-transform:rotate(-15deg)">
-                    <img src="images/5.jpg"  style="right: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/4.jpg" id="e1" style="left: 20%; -webkit-transform:rotate(-15deg)">
+                    <img src="images/5.jpg" id="e2" style="right: 30%; -webkit-transform:rotate(-15deg)">
                 </div>
 			</section>
 
@@ -697,7 +818,7 @@
 			},
 			startPageAnimation: function() {
 				switch(this.curpage) {
-					case 1: 
+					case 1:
 						animationPage1(1,0);
 						break;
 					case 2:
@@ -707,7 +828,7 @@
 					case 3:
 						animationPage3(1,1);
 						break;
-					case 4: 
+					case 4:
 						animationPage4(1,0);
 						break;
                     case 5:
@@ -743,9 +864,9 @@
             var text3 = document.getElementById('second-text3');
             var text4 = document.getElementById('second-text4');
             var text5 = document.getElementById('second-text5');
-            
+
             var index = 1;
-             
+
             if(x) {
                 secondTextAction(index);
             } else {
@@ -785,57 +906,66 @@
         function secondTextAction(i) {
             var time;
             switch(i) {
-                case 1: 
+                case 1:
                     document.getElementById('second-img5').style.display = 'none';
                     document.getElementById('second-text1').style.webkitAnimation = 'moveUpRight1 9s ease forwards';
                     document.getElementById('second-text5').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img1').style.display = 'block';
-                        
+                        for(var i=1;i<3;i++) {
+                        document.getElementById('a'+i+'').style.webkitAnimation = 'swing 7s ease '+(i-1)+'s';
+                        }
                     }, 2000);
-                    time = 9000;
+                    time = 7000;
                     break;
-                case 2: 
+                case 2:
                     document.getElementById('second-img1').style.display = 'none';
                     document.getElementById('second-text2').style.webkitAnimation = 'moveUpRight2 9s ease forwards';
                     document.getElementById('second-text1').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img2').style.display = 'block';
-                        
+                        for(var i=1;i<4;i++) {
+                            document.getElementById('b'+i+'').style.webkitAnimation = 'swing 7s ease '+(i-1)+'s';
+                        }
                     }, 2000);
-                    time = 10000;
+                    time = 7000;
                     break;
-                case 3: 
+                case 3:
                     document.getElementById('second-img2').style.display = 'none';
                     document.getElementById('second-text3').style.webkitAnimation = 'moveUpRight3 10s ease forwards';
                     document.getElementById('second-text2').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img3').style.display = 'block';
-                        
+                        for(var i=1;i<3;i++) {
+                            document.getElementById('c'+i+'').style.webkitAnimation = 'swing 8s ease '+(i-1)+'s';
+                        }
                     }, 2000);
-                    time = 7000;
+                    time = 8000;
                     break;
-                case 4: 
+                case 4:
                     document.getElementById('second-img3').style.display = 'none';
                     document.getElementById('second-text4').style.webkitAnimation = 'moveUpRight4 7s ease forwards';
                     document.getElementById('second-text3').style.webkitAnimation = '';
                     setTimeout(function() {
                         document.getElementById('second-img4').style.display = 'block';
-                        
+                        for(var i=1;i<2;i++) {
+                            document.getElementById('d'+i+'').style.webkitAnimation = 'swing 5s ease '+(i-1)+'s';
+                        }
                     }, 2000);
-                    time = 9000;
+                    time = 5000;
                     break;
-                case 5: 
+                case 5:
                     document.getElementById('second-img4').style.display = 'none';
                     document.getElementById('second-text5').style.webkitAnimation = 'moveUpRight5 9s ease forwards';
                     document.getElementById('second-text4').style.webkitAnimation = '';
-                    
                     setTimeout(function() {
                         document.getElementById('second-img5').style.display = 'block';
-                        
+                        for(var i=1;i<3;i++) {
+                            document.getElementById('e'+i+'').style.webkitAnimation = 'swing 7s ease '+(i-1)+'s';
+                        }
                     }, 2000);
                     i = 0;
-                    time = 9000;
+                    time = 7000;
                     break;
                 default:
             }
